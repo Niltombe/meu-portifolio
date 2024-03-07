@@ -1,107 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sistema Solar</title>
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Solar</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000;
+    }
+    #solar-system {
+        position: relative;
+        width: 600px;
+        height: 600px;
+    }
     .planet {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      position: absolute;
+        position: absolute;
+        border-radius: 50%;
+        background-color: #888;
     }
     #sun {
-      background-color: yellow;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
     }
     #mercury {
-      background-color: grey;
-      top: 25%;
-      left: 40%;
+        width: 10px;
+        height: 10px;
+        background-color: #b3b3b3;
+        left: 270px;
+        top: 40px;
     }
     #venus {
-      background-color: orange;
-      top: 35%;
-      left: 30%;
+        width: 20px;
+        height: 20px;
+        background-color: #ff9933;
+        left: 240px;
+        top: 120px;
     }
     #earth {
-      background-color: blue;
-      top: 45%;
-      left: 20%;
+        width: 22px;
+        height: 22px;
+        background-color: #3399ff;
+        left: 230px;
+        top: 200px;
     }
     #mars {
-      background-color: red;
-      top: 55%;
-      left: 10%;
+        width: 18px;
+        height: 18px;
+        background-color: #ff6600;
+        left: 260px;
+        top: 280px;
     }
     #jupiter {
-      background-color: brown;
-      top: 65%;
-      left: 5%;
+        width: 45px;
+        height: 45px;
+        background-color: #ffcc66;
+        left: 200px;
+        top: 360px;
     }
     #saturn {
-      background-color: goldenrod;
-      top: 75%;
-      left: 3%;
+        width: 40px;
+        height: 40px;
+        background-color: #ffd700;
+        left: 270px;
+        top: 460px;
     }
     #uranus {
-      background-color: lightblue;
-      top: 85%;
-      left: 2%;
+        width: 30px;
+        height: 30px;
+        background-color: #99ccff;
+        left: 220px;
+        top: 540px;
     }
     #neptune {
-      background-color: blue;
-      top: 95%;
-      left: 1%;
+        width: 28px;
+        height: 28px;
+        background-color: #3366ff;
+        left: 280px;
+        top: 620px;
     }
-  </style>
+    #sun a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        color: black;
+        text-decoration: none;
+    }
+</style>
 </head>
 <body>
-  <div id="sun" class="planet" onclick="showInfo('sun')">Sun</div>
-  <div id="mercury" class="planet" onclick="showInfo('mercury')">Mercury</div>
-  <div id="venus" class="planet" onclick="showInfo('venus')">Venus</div>
-  <div id="earth" class="planet" onclick="showInfo('earth')">Earth</div>
-  <div id="mars" class="planet" onclick="showInfo('mars')">Mars</div>
-  <div id="jupiter" class="planet" onclick="showInfo('jupiter')">Jupiter</div>
-  <div id="saturn" class="planet" onclick="showInfo('saturn')">Saturn</div>
-  <div id="uranus" class="planet" onclick="showInfo('uranus')">Uranus</div>
-  <div id="neptune" class="planet" onclick="showInfo('neptune')">Neptune</div>
-
-  <script>
-    function showInfo(planet) {
-      switch(planet) {
-        case 'sun':
-          window.location.href = ('https://www.todamateria.com.br/planetas-do-sistema-solar/';)
-          break;
-        case 'mercury':
-          window.location.href = 'link_para_info_mercury';
-          break;
-        case 'venus':
-          window.location.href = 'link_para_info_venus';
-          break;
-        case 'earth':
-          window.location.href = 'link_para_info_earth';
-          break;
-        case 'mars':
-          window.location.href = 'link_para_info_mars';
-          break;
-        case 'jupiter':
-          window.location.href = 'link_para_info_jupiter';
-          break;
-        case 'saturn':
-          window.location.href = 'link_para_info_saturn';
-          break;
-        case 'uranus':
-          window.location.href = 'link_para_info_uranus';
-          break;
-        case 'neptune':
-          window.location.href = 'link_para_info_neptune';
-          break;
-        default:
-          break;
-      }
-    }
-  </script>
+<div id="solar-system">
+    <div id="sun">
+        <a href="link_para_site_com_informações_do_sistema_solar">Sol</a>
+    </div>
+    <div id="mercury" class="planet"></div>
+    <div id="venus" class="planet"></div>
+    <div id="earth" class="planet"></div>
+    <div id="mars" class="planet"></div>
+    <div id="jupiter" class="planet"></div>
+    <div id="saturn" class="planet"></div>
+    <div id="uranus" class="planet"></div>
+    <div id="neptune" class="planet"></div>
+</div>
 </body>
 </html>
